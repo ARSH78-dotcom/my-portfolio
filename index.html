@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Arsh - Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arsh | Portfolio</title>
 <style>
-body { background:#0a0a0a; color:white; font-family: sans-serif; text-align:center; padding:50px; }
-h1 { font-size:40px; }
-.card { background:#1a1a1a; padding:20px; margin:20px; border-radius:15px; }
-a { color:#00ff99; }
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+body{margin:0;background:#050508;color:#fff;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+.bg{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 20% 30%, #1a0b2e 0%, transparent 50%),radial-gradient(circle at 80% 70%, #0f2a1f 0%, transparent 50%);z-index:-1}
+nav{display:flex;justify-content:space-between;padding:25px 8%;font-weight:600}
+.hero{padding:80px 8%;animation:fadeUp 1s ease}
+.hero h1{font-size:65px;line-height:1.1;margin:0}
+.hero h1 span{background:linear-gradient(90deg,#a855f7,#2dd4bf);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#9ca3af;font-size:18px;max-width:600px;margin-top:15px}
+.btn{display:inline-block;margin-top:25px;background:white;color:black;padding:12px 28px;border-radius:30px;font-weight:700;text-decoration:none;transition:0.3s}
+.btn:hover{transform:scale(1.05)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:20px 8% 80px}
+.card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:25px;backdrop-filter:blur(10px);transition:0.4s;animation:fadeUp 1s ease forwards;opacity:0}
+.card:nth-child(2){animation-delay:0.2s}
+.card:nth-child(3){animation-delay:0.4s}
+.card:hover{transform:translateY(-8px);border-color:#a855f7}
+.card h3{margin-top:0}
+.tag{display:inline-block;background:rgba(168,85,247,0.2);border:1px solid rgba(168,85,247,0.3);padding:4px 10px;border-radius:20px;font-size:12px;margin:5px 5px 0 0}
+@keyframes fadeUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
 </style>
 </head>
 <body>
-<h1>Hi, I'm Arsh 👋</h1>
-<p>I build intelligent, scalable web applications | AI & ML Learner</p>
-
-<div class="card">
-<h2>🚀 My Projects</h2>
-<p><b>Tech 360</b> - Resume builder + Job tracker</p>
-<p><b>Notice Hub</b> - College notice platform</p>
-<p><b>Fraud Detection</b> - ML model with 99% accuracy</p>
+<div class="bg"></div>
+<nav><div>ARSH.dev</div><div>● Available for work</div></nav>
+<div class="hero">
+<h1>I build <span>intelligent,<br>scalable & beautiful</span><br>web apps.</h1>
+<p>AI & ML Developer | Full Stack Learner. Same mission as Sushmita - code, create, innovate. Currently building real-world projects.</p>
+<a class="btn" href="https://github.com/ARSH78-dotcom" target="_blank">View GitHub →</a>
 </div>
-
+<div class="grid">
 <div class="card">
-<h2>📞 Contact Me</h2>
-<p>GitHub: ARSH78-dotcom</p>
-<p>Email: your-email@gmail.com</p>
+<h3>⚡ Tech 360</h3>
+<p>One-stop platform for developers - resume builder, contest tracker, job listings.</p>
+<div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+</div>
+<div class="card">
+<h3>🛡️ Credit Card Fraud Detection</h3>
+<p>ML model with 99% accuracy using Gradient Boosting & PCA for real-time fraud detection.</p>
+<div><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span></div>
+</div>
+<div class="card">
+<h3>🔍 Sentiment Analysis API</h3>
+<p>REST API that classifies text as positive/negative/neutral using NLP model.</p>
+<div><span class="tag">Flask</span><span class="tag">Docker</span><span class="tag">NLP</span></div>
+</div>
 </div>
 </body>
 </html>
